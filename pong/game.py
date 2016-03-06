@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-# import os
 import sys
 import pygame
 from pygame.locals import *
-from local_settings import *
-from color import *
+from local_settings import (FPS, SCREEN_SIZE, resource)
+from color import BLACK
 from characters import Player
 from engine import GameObject
 
@@ -18,7 +17,8 @@ class Game(object):
                                               0,
                                               self.display.bitsize)
 
-        self.player = Player(100, 100, "player.bmp")
+        self.player = Player(self.screen, 100, 100, resource['player'])
+
     def run(self):
         while True:
             dt = self.clock.tick(FPS) / 1000.0
@@ -34,7 +34,7 @@ class Game(object):
                         sys.exit()
             GameObject.sprite_group.draw(self.screen)
             self.player.update(dt)
-
+            self.player.draw(self.screen)
             pygame.display.flip()
             self.clock.tick(FPS)
 
