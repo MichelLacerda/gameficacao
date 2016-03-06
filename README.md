@@ -10,7 +10,7 @@ sudo dnf install python3 python3-tools python3-devel SDL SDL-devel \
 	portmidi-devel libjpeg-devel libpng-devel
 ```
 
-****/usr/bin/ld: cannot find -lprottime*
+*/usr/bin/ld: cannot find -lprottime*
 ```sh
 64bits	 cd /usr/lib
 32bits	 cd /usr/lib64
