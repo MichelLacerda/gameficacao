@@ -4,15 +4,18 @@ Aprenda a desenvolver os principais clássicos que deram origem aos games, usand
 
 Dependencias para Fedora 23:
 ```sh
-sudo dnf install python3 python3-tools python3-devel SDL SDL-devel  SDL_image SDL_image-devel SDL_mixer SDL_mixer-devel SDL_net  SDL_net-devel SDL_ttf SDL_ttf-devel smpeg smpeg-devel portmidi  portmidi-devel libjpeg-devel libpng-devel
+sudo dnf install python3 python3-tools python3-devel SDL SDL-devel \
+	SDL_image SDL_image-devel SDL_mixer SDL_mixer-devel SDL_net \
+	SDL_net-devel SDL_ttf SDL_ttf-devel smpeg smpeg-devel portmidi \
+	portmidi-devel libjpeg-devel libpng-devel
 ```
 
 ### /usr/bin/ld: cannot find -lprottime
 ```sh
-64bits 	#: cd /usr/lib
-32bits 	#: cd /usr/lib64
+64bits	 cd /usr/lib
+32bits	 cd /usr/lib64
 
-		#: ln -s libportmidi.so.0 libporttime.so
+		 ln -s libportmidi.so.0 libporttime.so
 ```
 
 Dependencias para Ubuntu 14.04+:
